@@ -1,25 +1,14 @@
-name: Otomatik Ziyaret ve Kaydet
+name: Otomatik Ziyaret
 
 on:
   schedule:
     - cron: "*/5 * * * *"
 
 jobs:
-  ziyaret_ve_kaydet:
+  ziyaret:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Kullanıcı bilgilerini ayarla
-      run: |
-        git config --global user.email "codermert@bk.ru"
-        git config --global user.name "codermert"
     - name: URL'yi ziyaret et
       run: |
-        response=$(curl -sS https://depojs.codermert1.repl.co)
-        echo "$response" > response.txt
-        echo "$(date)" >> response.txt
-    - name: Dosyayı kaydet
-      run: |
-        git add response.txt
-        git commit -m "🥳 Otomatik veri çalıştırıldı"
-        git push
+        curl -sS https://depojs.codermert1.repl.co
