@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: URL'yi ziyaret et
       run: |
-        curl -sS https://hhhhh.codermert1.repl.co/
+        curl -sS https://79644c84-0a2a-47ed-bff2-2f192c2750b8-00-2rvrz0olkkqlf.worf.replit.dev/
